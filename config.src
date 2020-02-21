@@ -1,0 +1,5 @@
+USERNAME="x"
+PASSWORD="x"
+HOSTNAME="domain"
+PUBLIC_IP_COMMAND="dig +short myip.opendns.com @resolver1.opendns.com"
+#PUBLIC_IP_COMMAND="curl ifconfig.me"
