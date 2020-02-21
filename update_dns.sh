@@ -33,7 +33,9 @@ while [ 1 ] ; do
   if valid_ip ${PUBLIC_IP} ; then
   
     if [ "${PUBLIC_IP}x" != "${OLD_PUBLIC_IP}x" ] ; then
+      set -x
       curl -X POST 'https://${USERNAME}:${PASSWORD}@domains.google.com/nic/update?hostname=${HOSTNAME}&myip='${PUBLIC_IP}
+      set +x
       OLD_PUBLIC_IP=${PUBLIC_IP}
       echo ""
     fi
